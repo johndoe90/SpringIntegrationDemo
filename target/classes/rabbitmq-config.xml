@@ -9,7 +9,9 @@
 	<rabbit:connection-factory id="connectionFactory"  
 							   username="sQEjMeMI"
 							   password="_afx35T1q8Cs42EHKWghG7HUrel0S65L"
-							   host="digging-acorn-23.bigwig.lshift.net:11137/mBT-llALpL5g"/>
+							   host="digging-acorn-23.bigwig.lshift.net"
+							   port="11137"
+							   virtual-host="mBT-llALpL5g"/>
 	<rabbit:admin connection-factory="connectionFactory"/>
 	<rabbit:template id="rabbitTemplate" connection-factory="connectionFactory" />
 	
