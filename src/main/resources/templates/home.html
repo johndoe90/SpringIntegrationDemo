@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="/css/style.css" />
+	</head>
+	<body>
+		<div id="wrapper">
+			<div style="text-align: center;">
+				<h1>Spring Integration Demo</h1><br />
+			</div>
+			
+			<div style="width: 300px; margin-left: auto; margin-right: auto;">
+				<textarea id="display" rows="6" cols="33" style="resize: none; width: 95%; margin-left: 1.25%; font-size: 20px;"></textarea>
+				<div id="nextLine" class="field" style="width: 72.5%;">n&auml;chste Rechenaufgabe</div>
+				<div id="clear" class="field">C</div>
+			
+				<div class="field append">7</div>
+				<div class="field append">8</div>
+				<div class="field append">9</div>
+				<div class="field append">/</div>
+				
+				<div class="field append">4</div>
+				<div class="field append">5</div>
+				<div class="field append">6</div>
+				<div class="field append">*</div>
+				
+				<div class="field append">1</div>
+				<div class="field append">2</div>
+				<div class="field append">3</div>
+				<div class="field append">-</div>
+				
+				<div class="field append">0</div>
+				<div class="field append">.</div>
+				<div id="equals" class="field">=</div>
+				<div class="field append">+</div>
+				
+				<div style="clear: both;"></div>
+			</div>
+						<h3>Erkl&auml;rung:</h3>
+			<span style="text-align: justify;">Man kann hier einfache Rechenaufgaben eintippen (+, -, *, / mit maximal 2 Zahlen zum Beispiel 4*9 oder 3.47-7). Es ist möglich mehrere Rechenaufgaben gleichzeitig anzugeben (durch "," voneinander trennen oder "n&auml;chste Rechenaufgabe" Knopf dr&uuml;cken, Beispiel: 4-9,3+7,147.4/8). Um die Aufgaben zu lösen muss man auf das "=" Zeichen dr&uuml;cken. Daraufhin werden die Aufgaben an der Server geschickt. Dort werden die Aufgaben via Messagebroker (RabbitMQ) weitergeleitet um dann verarbeitet zu werden. Zuerst werden die Aufgaben in einzelne Rechnungen gespalten (Message Splitter), danach werden sie berechnet (Service Activator) und anschließend wieder in eine Antwort zusammengef&uuml;hrt (Message Aggregator).</span>
+			
+			<h3>Integration Graph</h3>
+			<img alt="Integration Graph" src="/img/integration-graph.jpg" width="960" height="476" />
+		</div>
+		
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="/js/calculator.js"></script>
+	</body>
+</html>
