@@ -6,7 +6,10 @@
 		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration-4.0.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 		
-	<rabbit:connection-factory id="connectionFactory"/>
+	<rabbit:connection-factory id="connectionFactory"  
+							   username="sQEjMeMI"
+							   password="_afx35T1q8Cs42EHKWghG7HUrel0S65L"
+							   host="digging-acorn-23.bigwig.lshift.net:11137/mBT-llALpL5g"/>
 	<rabbit:admin connection-factory="connectionFactory"/>
 	<rabbit:template id="rabbitTemplate" connection-factory="connectionFactory" />
 	

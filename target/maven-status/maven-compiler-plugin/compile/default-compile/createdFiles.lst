@@ -1,0 +1,6 @@
+com/pf/calculator/CalculationsSplitter.class
+com/pf/calculator/controllers/HomeController.class
+com/pf/calculator/Calculator.class
+com/pf/calculator/controllers/CalculatorController.class
+com/pf/calculator/Application.class
+com/pf/calculator/CalculationsAggregator.class
