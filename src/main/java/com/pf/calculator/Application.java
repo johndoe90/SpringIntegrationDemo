@@ -11,7 +11,6 @@ import org.springframework.context.annotation.ImportResource;
 @Configuration
 @EnableAutoConfiguration
 @ComponentScan(basePackages = {"com.pf.calculator"})
-@ImportResource({"classpath:integration-config.xml", "classpath:rabbitmq-config.xml"})
 public class Application {
     public static void main(String[] args) {
        SpringApplication.run(Application.class, args);

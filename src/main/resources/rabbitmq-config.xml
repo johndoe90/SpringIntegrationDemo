@@ -5,13 +5,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/rabbit http://www.springframework.org/schema/rabbit/spring-rabbit-1.3.xsd
 		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration-4.0.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-		
-	<rabbit:connection-factory id="connectionFactory"  
-							   username="sQEjMeMI"
-							   password="_afx35T1q8Cs42EHKWghG7HUrel0S65L"
-							   host="digging-acorn-23.bigwig.lshift.net"
-							   port="11137"
-							   virtual-host="mBT-llALpL5g"/>
+							   
 	<rabbit:admin connection-factory="connectionFactory"/>
 	<rabbit:template id="rabbitTemplate" connection-factory="connectionFactory" />
 	
